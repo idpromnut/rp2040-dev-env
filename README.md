@@ -18,6 +18,26 @@ Install [VSCode](https://code.visualstudio.com/download)
 
 ## Windows (10)
 
+
+
+Links:
+GNU Arm: https://developer.arm.com/downloads/-/gnu-rm
+MinGW: https://github.com/niXman/mingw-builds-binaries/releases
+CMake: https://cmake.org/download/
+Python: https://www.python.org/downloads/
+Git: https://git-scm.com/download/win
+Visual Studio Code: https://code.visualstudio.com/
+
+
+Commands:
+git clone -b master "https://github.com/raspberrypi/pico-sdk"
+cd pico-sdk 
+git submodule update --init 
+cd ..
+git clone -b master "https://github.com/raspberrypi/pico-examples"
+
+
+
 ## Linux (Debian)
 
 ### Install RP2040 Build Tools
