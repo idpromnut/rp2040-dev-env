@@ -18,8 +18,6 @@ Install [VSCode](https://code.visualstudio.com/download)
 
 ## Windows (10)
 
-Not currently supported.
-
 ## Linux (Debian)
 
 ### Install RP2040 Build Tools
