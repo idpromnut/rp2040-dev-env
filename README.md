@@ -16,26 +16,37 @@ Install [VSCode](https://code.visualstudio.com/download)
 - [CMake Tools from Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)
 - [CMake Language support](https://marketplace.visualstudio.com/items?itemName=twxs.cmake)
 
+
 ## Windows (10)
 
+### Install dependencies
+
+- [GNU Arm toolchain](https://developer.arm.com/downloads/-/gnu-rm)
+- [MinGW](https://github.com/niXman/mingw-builds-binaries/releases)
+- [CMake](https://cmake.org/download/)
+- [Python](https://www.python.org/downloads/)
+- [Git](https://git-scm.com/download/win)
 
 
-Links:
-GNU Arm: https://developer.arm.com/downloads/-/gnu-rm
-MinGW: https://github.com/niXman/mingw-builds-binaries/releases
-CMake: https://cmake.org/download/
-Python: https://www.python.org/downloads/
-Git: https://git-scm.com/download/win
-Visual Studio Code: https://code.visualstudio.com/
+### Install RP2040 Build Tools
 
-
-Commands:
+```
 git clone -b master "https://github.com/raspberrypi/pico-sdk"
 cd pico-sdk 
 git submodule update --init 
 cd ..
 git clone -b master "https://github.com/raspberrypi/pico-examples"
+```
 
+### Configure VSCode
+
+#### Configure CMake
+
+In *CMake Tools*, select Extension Settings and navigate to "Cmake: Build Environment". Add PICO_SDK_PATH and set it to the location that you installed the PICO SDK (in the above step). This should be in the directory that you ran the above script in. Add the same PICO_SDK_PATH + path into the "Cmake: Configure Environment".
+
+Navigate to "Cmake: Cmake Path". Enter in the path to the Cmake binary.
+
+Navigate to "Cmake: Generator" and enter "MinGW Makefiles"
 
 
 ## Linux (Debian)
@@ -77,7 +88,10 @@ Add code + basic CMake file.
 4. Navigate into your build folder. Copy blink.uf2 (unfortunately, copying files from within VS Code does not work--you will have to do it from a file explorer window). Paste the file into the top level of your RPI-RP2 drive.
 5. The Pico should automatically reboot and begin running your code.
 
+
 ## Resources
 
 1. [https://www.digikey.ca/en/maker/projects/raspberry-pi-pico-and-rp2040-cc-part-1-blink-and-vs-code/7102fb8bca95452e9df6150f39ae8422](https://www.digikey.ca/en/maker/projects/raspberry-pi-pico-and-rp2040-cc-part-1-blink-and-vs-code/7102fb8bca95452e9df6150f39ae8422)
+2. [https://www.youtube.com/watch?v=BAoTBg8MJJ4&ab_channel=JoeJackson](https://www.youtube.com/watch?v=BAoTBg8MJJ4&ab_channel=JoeJackson)
+
 
