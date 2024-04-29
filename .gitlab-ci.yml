@@ -12,9 +12,12 @@ rp2040-build:
     - mkdir build
     - cd build
     - cmake .. && make -j4
-#  artifacts:
-#    paths:
-#      - target/multiplexor-deploy.zip
-#      - target/etc/*.template
-#    expire_in: 1 week
+  artifacts:
+    paths:
+      - build/blink.uf2
+      - build/blink.hex
+      - build/blink.elf
+      - build/blink.bin
+      - build/blink.elf.map
+    expire_in: 1 month
 
