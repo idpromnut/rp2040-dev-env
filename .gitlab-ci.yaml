@@ -1,0 +1,20 @@
+image: docker:latest
+services:
+  - docker:dind
+
+stages:
+  - build
+
+rp2040-build:
+  image: lukstep:raspberry-pi-pico-sdk
+  stage: build
+  script:
+    - mkdir build
+    - cd build
+    - cmake .. && make -j4
+#  artifacts:
+#    paths:
+#      - target/multiplexor-deploy.zip
+#      - target/etc/*.template
+#    expire_in: 1 week
+
