@@ -6,7 +6,7 @@ stages:
   - build
 
 rp2040-build:
-  image: lukstep:raspberry-pi-pico-sdk
+  image: lukstep/raspberry-pi-pico-sdk:latest
   stage: build
   script:
     - mkdir build
