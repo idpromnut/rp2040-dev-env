@@ -14,10 +14,10 @@ rp2040-build:
     - cmake .. && make -j4
   artifacts:
     paths:
-      - build/blink.uf2
-      - build/blink.hex
-      - build/blink.elf
-      - build/blink.bin
-      - build/blink.elf.map
+      - build/*.uf2
+      - build/*.hex
+      - build/*.elf
+      - build/*.bin
+      - build/*.elf.map
     expire_in: 1 month
 
